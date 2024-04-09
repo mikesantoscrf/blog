@@ -292,13 +292,21 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
+
+            'text'         => 'Principal',
+            'url'         => 'home',
+            'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
+            'text'         => 'Categoria',
+            'url'         => 'categoria',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
+        [
+            'text'         => 'Postagem',
+            'url'         => 'postagem',
+            'icon' => 'fas fa-fw fa-user',
         ],
 
         // Sidebar items:
