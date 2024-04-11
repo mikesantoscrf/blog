@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Postagem;
 use App\Models\categoria;
 use App\Models\User;
-
+use App\Models\Comentario;
 
 
 
@@ -46,7 +46,16 @@ class BlogController extends Controller
 
                 public function postagemComentario(Request $request, $id){
 
-                    $postagem = Postagem::find($id);
+
+
+                    $comentario = new Comentario;
+                    $comentario->conteudo = $request->conteudo;
+                    $comentario->user_id = auth()->user()->id;
+                    $comentario->postagem_id = $id;
+                    $comentario->save();
+
+
+                return redirect()->route('blog.postagem' , $id);
 
                 }
 

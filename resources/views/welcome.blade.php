@@ -21,8 +21,8 @@
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $value->categoria->nome }}</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="{{ url('/blog/postagem/' . $value->id) }}" class="icon solid fa-comment">Comentários - 128</a></li>
+										<li><a href="#" class="icon solid fa-heart">{{ $value->curtidas->count() }} curtidas </a></li>
+										<li><a href="{{ url('/blog/postagem/' . $value->id) }}" class="icon solid fa-comment">{{ $value->comentarios->count() }} comentários</a></li>
 									</ul>
 								</footer>
 							</article>

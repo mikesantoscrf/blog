@@ -25,7 +25,12 @@ Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function () {
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
 
 //--------------------------------------- CRUD CATEGORIA -----------------------------------
 
@@ -101,6 +106,7 @@ Route::put('/postagem/{id}/edit', [PostagemController::class, 'update'])->name('
 // DESTROY DELETE
 Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
 
+});
 
 // --------------------------------BLOG----------------------------------------------
 
@@ -114,5 +120,5 @@ Route::get('/blog/autor/{id}', [BlogController::class, 'autorPostagem'])->name('
 
 Route::get('/blog/postagem/{id}', [BlogController::class, 'postagem'])->name('blog.postagem');
 
-Route::get('/blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario');
+Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario')->middleware('auth');
 
