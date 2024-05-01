@@ -5,13 +5,12 @@
 						<!-- Post -->
 							<article class="post">
 
-								<span class="image featured"><img src="{{ url('images/pic01.jpg') }}" alt="" /></span>
 								<p>{{ $postagem->conteudo }}</p>
 
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $postagem->categoria->nome }}</a></li>
-										<li><a href="#" class="icon solid fa-heart">{{ $postagem->curtidas>count() }} CURTIDAS</a></li>
+										<li><a href="#" class="icon solid fa-heart">{{ $postagem->curtidas>count() }}</a></li>
 										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">{{ $postagem->comentarios->count() }} COMENTÁRIOS</a></li>
 
 

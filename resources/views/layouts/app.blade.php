@@ -24,8 +24,6 @@
 								<li><a href="{{ url('/') }}">Início</a></li>
 								<li><a href="{{ url('/blog/categoria') }}">Categoria</a></li>
 								<li><a href="{{ url('/blog/autor') }}">Autor</a></li>
-								<li><a href="#">Tempus</a></li>
-								<li><a href="#">Adipiscing</a></li>
 							</ul>
 						</nav>
 						<nav class="main">

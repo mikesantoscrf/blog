@@ -11,7 +11,10 @@
                         <strong>Categoria:</strong>           {{ $postagem->categoria->nome }}<br>
                         <strong>Título:</strong>           {{ $postagem->titulo }}<br>
                         <strong>Autor:</strong>           {{ $postagem->user->name }}<br>
-                        <strong>Conteúdo:</strong>           {{ $postagem->conteudo }}<br>
+                        <strong>Conteúdo:</strong>
+                        <br>
+                        {{!! $postagem->conteudo !!}}
+                        <br>
                         <strong>Criação:</strong>        {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/y h:i:s') }}<br>
                         <strong>Atualização:</strong>    {{ \Carbon\Carbon::parse($postagem->updated_at)->format('d/m/y h:i:s') }}<br>
 
