@@ -20,7 +20,7 @@
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $value->categoria->nome }}</a></li>
-                                        <li><a href="" class="icon solid fa-heart">{{ $value->curtidas->count() }} curtidas </a></li>
+                                        <li><a href="#" class="icon solid fa-heart">{{ $value->curtidas->count() }} curtidas </a></li>
 
                                         @auth
                                         <li><a href="{{ url('/blog/curtida/' . $value->id) }}" class="icon solid fa-heart">curtir </a></li>
